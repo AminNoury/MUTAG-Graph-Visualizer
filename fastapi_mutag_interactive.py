@@ -259,7 +259,7 @@ body {{ font-family: Arial, Helvetica, sans-serif; margin:16px; background:#f7f9
 .container {{ display:flex; gap:18px; align-items:flex-start; }}
 .left {{ flex:0 0 65%; box-shadow:0 6px 18px rgba(0,0,0,0.08); background:white; padding:8px; border-radius:6px; }}
 .right {{ flex:0 0 35%; box-shadow:0 6px 18px rgba(0,0,0,0.06); background:white; padding:12px; border-radius:6px; }}
-iframe {{ width:100%; height:600px; border:none; border-radius:4px; }}
+iframe {{ width:90%; height:520px; border:none; border-radius:4px; }}
 table {{ width:100%; border-collapse:collapse; font-size:13px; }}
 th, td {{ padding:8px; border:1px solid #e7ecf0; text-align:center; }}
 th {{ background:#f0f4f7; }}
@@ -270,12 +270,20 @@ th {{ background:#f0f4f7; }}
 </style>
 </head>
 <body>
-<div class="header">
-<h1>MUTAG Molecule Viewer</h1>
-<div class="badge" style="background:{label_color};">{label_text}</div>
-<div class="supervisor"><h2>Academic Supervisor:Dr.Javad Mohammad Zadeh</h2></div>
-<div class="author"><h2>Implementation by Amin Nouri</h2></div>
+<div class="header" style="text-align:center;">
+  <h1 style="font-size:24px;">MUTAG Molecule Viewer</h1>
+  <div style="background:#3b82f6; color:white; padding:10px 14px; border-radius:10px; line-height:1.4; display:inline-block; margin-top:8px;">
+    <h3 style="margin:0; font-size:16px;">Academic Supervisor: Dr. Javad Mohammad Zadeh</h3>
+    <h3 style="margin:0; font-size:16px;">Implementation by Amin Nouri</h3>
+  </div>
+  <div style="height:6px;"></div>
+  <div style="background:{label_color}; color:white; padding:6px 12px; border-radius:8px; font-size:14px; display:block; width:fit-content; margin:0 auto; text-align:center;">
+    {label_text}
+  </div>
 </div>
+
+
+
 
 <div class="controls">
 <form method="get" style="display:inline-block;">
