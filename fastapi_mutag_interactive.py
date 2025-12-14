@@ -285,19 +285,82 @@ th {{ background:#f0f4f7; }}
 
 
 
-<div class="controls">
-<form method="get" style="display:inline-block;">
-<label class="small-muted">Enter molecule index (0-{len(dataset)-1}):</label>
-<input type="number" name="mol_index" min="0" max="{len(dataset)-1}" value="{mol_index}">
-<input type="submit" value="View">
-</form>
-<a href="/?mol_index={prev_idx}"><button>&laquo; Previous</button></a>
-<a href="/?mol_index={next_idx}"><button>Next &raquo;</button></a>
-<span style="margin-left:12px;" class="download-links">
-<a href="{graphml_link}" download>Download GraphML</a>
-<a href="{json_link}" download>Download Nodes JSON</a>
-</span>
+<div class="controls"
+     style="
+       display:flex;
+       justify-content:flex-start;
+       align-items:center;
+       gap:14px;
+       margin-bottom:24px;
+       margin-left:16px;
+     ">
+
+  <form method="get"
+        style="
+          display:flex;
+          align-items:center;
+          gap:12px;
+        ">
+
+    <label class="small-muted" style="font-size:16px;">
+      Molecule index:
+    </label>
+
+    <input type="number"
+           name="mol_index"
+           min="0"
+           max="{len(dataset)-1}"
+           value="{mol_index}"
+           style="
+             width:120px;
+             padding:12px;
+             font-size:18px;
+             border-radius:8px;
+             border:1px solid #ccc;
+             text-align:center;
+           ">
+
+    <button type="submit"
+            style="
+              padding:12px 22px;
+              font-size:18px;
+              font-weight:600;
+              border-radius:8px;
+              background:#2563eb;
+              color:white;
+              border:none;
+              cursor:pointer;
+            ">
+      View
+    </button>
+  </form>
+
+  <a href="/?mol_index={prev_idx}">
+    <button style="
+      padding:12px 20px;
+      font-size:18px;
+      font-weight:600;
+      border-radius:8px;
+      cursor:pointer;
+    ">
+      ⟵ Previous
+    </button>
+  </a>
+
+  <a href="/?mol_index={next_idx}">
+    <button style="
+      padding:12px 20px;
+      font-size:18px;
+      font-weight:600;
+      border-radius:8px;
+      cursor:pointer;
+    ">
+      Next ⟶
+    </button>
+  </a>
+
 </div>
+
 
 <div class="container">
 <div class="left">
